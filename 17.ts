@@ -14,6 +14,9 @@ class Sellable<T> {
     this.cart.push(product);
   }
 }
-const c = new Sellable();
-c.addToCart(1);
+const q = new Sellable<Quiz>();
+q.addToCart({ name: "q1", type: "quiz" });
+console.log(q.cart);
+const c = new Sellable<Course>();
+c.addToCart({ name: "c1", author: "ming", subject: "cs" });
 console.log(c.cart);
